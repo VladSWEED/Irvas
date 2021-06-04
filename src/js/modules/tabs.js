@@ -19,10 +19,8 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     const target = e.target;
 
     if (target && (target.classList.contains(tabSelector.replace(/\./, "")) || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
-      console.log('1 условие')
       tabs.forEach((item, i) => {
         if (item == target || target.parentNode == item) {
-          console.log('2 условие')
           hideContent();
           showContent(i);
         }

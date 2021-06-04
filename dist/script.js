@@ -15574,10 +15574,8 @@ var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeCla
     var target = e.target;
 
     if (target && (target.classList.contains(tabSelector.replace(/\./, "")) || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
-      console.log('1 условие');
       tabs.forEach(function (item, i) {
         if (item == target || target.parentNode == item) {
-          console.log('2 условие');
           hideContent();
           showContent(i);
         }
